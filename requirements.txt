@@ -1,0 +1,10 @@
+pandas
+psycopg2
+pyarrow
+openpyxl
+
+
+
+requests
+beautifulsoup4
+lxml
