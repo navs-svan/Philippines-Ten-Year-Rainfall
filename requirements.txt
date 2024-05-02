@@ -2,9 +2,7 @@ pandas
 psycopg2
 pyarrow
 openpyxl
-
-
-
+sqlalchemy
 requests
 beautifulsoup4
 lxml
