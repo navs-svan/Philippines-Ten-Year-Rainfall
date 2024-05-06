@@ -45,7 +45,7 @@ class Rainfall(Base):
         self.date = date
         self.amount = amount
 
-    date = relationship("Dates", back_populates="date_rainfall")
+    date = relationship("Dates", back_populates="date_rainfall", lazy="joined")
     place = relationship("Places", back_populates="place_rainfall", lazy="joined")
 
 
