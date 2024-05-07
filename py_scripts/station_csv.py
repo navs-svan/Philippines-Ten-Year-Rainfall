@@ -24,9 +24,11 @@ if __name__ == "__main__":
     )
     engine = create_engine(url=engine_url)
 
-    csv_file = Path("raw_files/Coordinates/coordinates.csv")
+    root_dir = Path(__file__).resolve().parent.parent
+    csv_file = root_dir / "raw_files" / "Coordinates" / "coordinates.csv"
 
     df = pd.read_csv(csv_file)
+    
     places_list = [
         Places(name=row[0], latitude=row[1], longitude=row[2])
         for row in zip(df["Name"], df["Latitude"], df["Longitude"])
