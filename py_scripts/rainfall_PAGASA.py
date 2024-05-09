@@ -6,7 +6,7 @@ from sqlalchemy.orm import sessionmaker
 import os
 
 
-def func(row, session, year, month):
+def insert_amount(row, session, year, month):
     rainfalls = []
     amounts = [col for col in row]
     station = row.name
@@ -56,7 +56,7 @@ if __name__ == "__main__":
     for year in range(2009, 2020):
         for month in range(1, 13):
             A = df.loc[:, idx[year, month]]
-            A.apply(func, axis=1, args=(session, year, month))
+            A.apply(insert_amount, axis=1, args=(session, year, month))
     
     session.close()
     

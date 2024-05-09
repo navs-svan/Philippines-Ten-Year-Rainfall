@@ -40,6 +40,8 @@ class Rainfall(Base):
     date_id = Column(INTEGER, ForeignKey(Dates.date_id), primary_key=True)
     amount = Column(NUMERIC)
 
+    UniqueConstraint(place_id, date_id, amount, name="amount_uix")
+
     def __init__(self, place, date, amount=0):
         self.place = place
         self.date = date
@@ -79,21 +81,5 @@ if __name__ == "__main__":
                 date_list.append(Dates(year=year, month=month, day=day))
 
     session.add_all(date_list)
-
-    # stmt = select(Places).where(Places.name == "APARRI, CAGAYAN")
-    # result = session.execute(stmt).all()
-    # for row in result:
-    #     station = row[0]
-    #     # print(row[0])
-
-    # date_stmt = select(Dates).where(
-    #     Dates.year == 2014 and Dates.month == 12 and Dates.day == 13
-    # )
-    # date_res = session.execute(date_stmt).all()
-    # for row in date_res:
-    #     date = row[0]
-
-    # rainfall = Rainfall(place=station, date=date, amount=104.56)
-    # session.add(rainfall)
 
     session.commit()
