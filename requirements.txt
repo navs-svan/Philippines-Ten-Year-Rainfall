@@ -1,4 +1,5 @@
 pandas
+python-dotenv
 psycopg2
 pyarrow
 openpyxl
@@ -9,3 +10,9 @@ lxml
 
 pytesseract
 pdf2image
+
+geopandas
+shapely
+folium
+matplotlib
+scikit-learn
