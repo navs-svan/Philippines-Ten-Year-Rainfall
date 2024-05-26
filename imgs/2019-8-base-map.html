@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f875b82da268129a7e3911c53c7eebf9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    
+                    <style>
+                        .foliumpopup {
+                            background-color: yellow;
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_f875b82da268129a7e3911c53c7eebf9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f875b82da268129a7e3911c53c7eebf9 = L.map(
+                "map_f875b82da268129a7e3911c53c7eebf9",
+                {
+                    center: [11.934, 122.969],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_f875b82da268129a7e3911c53c7eebf9);
+
+            
+
+        
+    
+            var tile_layer_c1a0bd23b89a8e629dfd394c2d7a4690 = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=r\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "Google maps", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_c1a0bd23b89a8e629dfd394c2d7a4690.addTo(map_f875b82da268129a7e3911c53c7eebf9);
+        
+    
+
+        function geo_json_71e870ab8e5ddad4cfee324e77002638_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_71e870ab8e5ddad4cfee324e77002638 = L.geoJson(null, {
+                onEachFeature: geo_json_71e870ab8e5ddad4cfee324e77002638_onEachFeature,
+            
+        });
+
+        function geo_json_71e870ab8e5ddad4cfee324e77002638_add (data) {
+            geo_json_71e870ab8e5ddad4cfee324e77002638
+                .addData(data);
+        }
+            geo_json_71e870ab8e5ddad4cfee324e77002638_add({"bbox": [118.758778, 6.057181, 126.337897, 20.801433], "features": [{"bbox": [122.017589, 14.105694, 122.017589, 14.105694], "geometry": {"coordinates": [122.017589, 14.105694], "type": "Point"}, "id": "0", "properties": {"amount": 106.2, "latitude": 14.105694, "longitude": 122.017589, "name": "ALABAT, QUEZON"}, "type": "Feature"}, {"bbox": [121.055244, 14.090081, 121.055244, 14.090081], "geometry": {"coordinates": [121.055244, 14.090081], "type": "Point"}, "id": "1", "properties": {"amount": 323.0, "latitude": 14.090081, "longitude": 121.055244, "name": "AMBULONG, BATANGAS"}, "type": "Feature"}, {"bbox": [121.630433, 18.359681, 121.630433, 18.359681], "geometry": {"coordinates": [121.630433, 18.359681], "type": "Point"}, "id": "2", "properties": {"amount": 411.9, "latitude": 18.359681, "longitude": 121.630433, "name": "APARRI, CAGAYAN"}, "type": "Feature"}, {"bbox": [120.601447, 16.4041, 120.601447, 16.4041], "geometry": {"coordinates": [120.601447, 16.4041], "type": "Point"}, "id": "3", "properties": {"amount": 1525.2, "latitude": 16.4041, "longitude": 120.601447, "name": "BAGUIO CITY, BENGUET"}, "type": "Feature"}, {"bbox": [121.632047, 15.749367, 121.632047, 15.749367], "geometry": {"coordinates": [121.632047, 15.749367], "type": "Point"}, "id": "4", "properties": {"amount": 54.099999999999994, "latitude": 15.749367, "longitude": 121.632047, "name": "BALER, AURORA (RADAR)"}, "type": "Feature"}, {"bbox": [121.970642, 20.427731, 121.970642, 20.427731], "geometry": {"coordinates": [121.970642, 20.427731], "type": "Point"}, "id": "5", "properties": {"amount": 677.8000000000001, "latitude": 20.427731, "longitude": 121.970642, "name": "BASCO, BATANES"}, "type": "Feature"}, {"bbox": [125.443639, 11.660908, 125.443639, 11.660908], "geometry": {"coordinates": [125.443639, 11.660908], "type": "Point"}, "id": "6", "properties": {"amount": 113.2, "latitude": 11.660908, "longitude": 125.443639, "name": "BORONGAN, EASTERN SAMAR"}, "type": "Feature"}, {"bbox": [125.482433, 8.946992, 125.482433, 8.946992], "geometry": {"coordinates": [125.482433, 8.946992], "type": "Point"}, "id": "7", "properties": {"amount": 171.2, "latitude": 8.946992, "longitude": 125.482433, "name": "BUTUAN CITY, AGUSAN DEL NORTE"}, "type": "Feature"}, {"bbox": [120.951914, 15.471469, 120.951914, 15.471469], "geometry": {"coordinates": [120.951914, 15.471469], "type": "Point"}, "id": "8", "properties": {"amount": 530.1, "latitude": 15.471469, "longitude": 120.951914, "name": "CABANATUAN, NUEVA ECIJA"}, "type": "Feature"}, {"bbox": [121.189667, 13.409775, 121.189667, 13.409775], "geometry": {"coordinates": [121.189667, 13.409775], "type": "Point"}, "id": "9", "properties": {"amount": 174.1, "latitude": 13.409775, "longitude": 121.189667, "name": "CALAPAN, ORIENTAL MINDORO"}, "type": "Feature"}, {"bbox": [121.471175, 19.266678, 121.471175, 19.266678], "geometry": {"coordinates": [121.471175, 19.266678], "type": "Point"}, "id": "10", "properties": {"amount": 424.5, "latitude": 19.266678, "longitude": 121.471175, "name": "CALAYAN, CAGAYAN"}, "type": "Feature"}, {"bbox": [122.128814, 16.265428, 122.128814, 16.265428], "geometry": {"coordinates": [122.128814, 16.265428], "type": "Point"}, "id": "11", "properties": {"amount": 312.2, "latitude": 16.265428, "longitude": 122.128814, "name": "CASIGURAN, AURORA"}, "type": "Feature"}, {"bbox": [124.6285, 12.505517, 124.6285, 12.505517], "geometry": {"coordinates": [124.6285, 12.505517], "type": "Point"}, "id": "12", "properties": {"amount": 230.4, "latitude": 12.505517, "longitude": 124.6285, "name": "CATARMAN, NORTHERN SAMAR"}, "type": "Feature"}, {"bbox": [124.88425, 11.775033, 124.88425, 11.775033], "geometry": {"coordinates": [124.88425, 11.775033], "type": "Point"}, "id": "13", "properties": {"amount": 180.5, "latitude": 11.775033, "longitude": 124.88425, "name": "CATBALOGAN, WESTERN SAMAR"}, "type": "Feature"}, {"bbox": [120.548903, 15.185492, 120.548903, 15.185492], "geometry": {"coordinates": [120.548903, 15.185492], "type": "Point"}, "id": "14", "properties": {"amount": 381.6, "latitude": 15.185492, "longitude": 120.548903, "name": "CLARK INTERNATIONAL AIRPORT, PAMPANGA"}, "type": "Feature"}, {"bbox": [120.199833, 12.003667, 120.199833, 12.003667], "geometry": {"coordinates": [120.199833, 12.003667], "type": "Point"}, "id": "15", "properties": {"amount": 952.8, "latitude": 12.003667, "longitude": 120.199833, "name": "CORON, PALAWAN"}, "type": "Feature"}, {"bbox": [124.214969, 7.162458, 124.214969, 7.162458], "geometry": {"coordinates": [124.214969, 7.162458], "type": "Point"}, "id": "16", "properties": {"amount": 139.9, "latitude": 7.162458, "longitude": 124.214969, "name": "COTABATO CITY, MAGUINDANAO"}, "type": "Feature"}, {"bbox": [120.2709, 14.791786, 120.2709, 14.791786], "geometry": {"coordinates": [120.2709, 14.791786], "type": "Point"}, "id": "17", "properties": {"amount": 1386.4, "latitude": 14.791786, "longitude": 120.2709, "name": "CUBI PT., SUBIC BAY OLONGAPO CITY, ZAMBALES"}, "type": "Feature"}, {"bbox": [121.008036, 10.852119, 121.008036, 10.852119], "geometry": {"coordinates": [121.008036, 10.852119], "type": "Point"}, "id": "18", "properties": {"amount": 322.7, "latitude": 10.852119, "longitude": 121.008036, "name": "CUYO, PALAWAN"}, "type": "Feature"}, {"bbox": [122.9827, 14.12875, 122.9827, 14.12875], "geometry": {"coordinates": [122.9827, 14.12875], "type": "Point"}, "id": "19", "properties": {"amount": 177.4, "latitude": 14.12875, "longitude": 122.9827, "name": "DAET, CAMARINES NORTE"}, "type": "Feature"}, {"bbox": [120.35225, 16.086875, 120.35225, 16.086875], "geometry": {"coordinates": [120.35225, 16.086875], "type": "Point"}, "id": "20", "properties": {"amount": 565.6, "latitude": 16.086875, "longitude": 120.35225, "name": "DAGUPAN CITY, PANGASINAN"}, "type": "Feature"}, {"bbox": [125.654842, 7.127892, 125.654842, 7.127892], "geometry": {"coordinates": [125.654842, 7.127892], "type": "Point"}, "id": "21", "properties": {"amount": 252.8, "latitude": 7.127892, "longitude": 125.654842, "name": "DAVAO CITY, DAVAO DEL SUR"}, "type": "Feature"}, {"bbox": [123.345425, 8.603358, 123.345425, 8.603358], "geometry": {"coordinates": [123.345425, 8.603358], "type": "Point"}, "id": "22", "properties": {"amount": 167.4, "latitude": 8.603358, "longitude": 123.345425, "name": "DIPOLOG, ZAMBOANGA DEL NORTE"}, "type": "Feature"}, {"bbox": [123.299314, 9.333175, 123.299314, 9.333175], "geometry": {"coordinates": [123.299314, 9.333175], "type": "Point"}, "id": "23", "properties": {"amount": 53.1, "latitude": 9.333175, "longitude": 123.299314, "name": "DUMAGUETE CITY, NEGROS ORIENTAL"}, "type": "Feature"}, {"bbox": [125.103108, 6.057181, 125.103108, 6.057181], "geometry": {"coordinates": [125.103108, 6.057181], "type": "Point"}, "id": "24", "properties": {"amount": 85.39999999999999, "latitude": 6.057181, "longitude": 125.103108, "name": "GENERAL SANTOS, SOUTH COTABATO"}, "type": "Feature"}, {"bbox": [125.755717, 11.045417, 125.755717, 11.045417], "geometry": {"coordinates": [125.755717, 11.045417], "type": "Point"}, "id": "25", "properties": {"amount": 96.5, "latitude": 11.045417, "longitude": 125.755717, "name": "GUIUAN, EASTERN SAMAR"}, "type": "Feature"}, {"bbox": [126.337897, 8.366536, 126.337897, 8.366536], "geometry": {"coordinates": [126.337897, 8.366536], "type": "Point"}, "id": "26", "properties": {"amount": 131.2, "latitude": 8.366536, "longitude": 126.337897, "name": "HINATUAN, SURIGAO DEL SUR"}, "type": "Feature"}, {"bbox": [119.967861, 15.326183, 119.967861, 15.326183], "geometry": {"coordinates": [119.967861, 15.326183], "type": "Point"}, "id": "27", "properties": {"amount": 1336.3999999999999, "latitude": 15.326183, "longitude": 119.967861, "name": "IBA, ZAMBALES"}, "type": "Feature"}, {"bbox": [121.649033, 14.746636, 121.649033, 14.746636], "geometry": {"coordinates": [121.649033, 14.746636], "type": "Point"}, "id": "28", "properties": {"amount": 152.0, "latitude": 14.746636, "longitude": 121.649033, "name": "INFANTA, QUEZON"}, "type": "Feature"}, {"bbox": [121.851417, 20.801433, 121.851417, 20.801433], "geometry": {"coordinates": [121.851417, 20.801433], "type": "Point"}, "id": "29", "properties": {"amount": 227.6, "latitude": 20.801433, "longitude": 121.851417, "name": "ITBAYAT, BATANES"}, "type": "Feature"}, {"bbox": [120.534394, 18.182931, 120.534394, 18.182931], "geometry": {"coordinates": [120.534394, 18.182931], "type": "Point"}, "id": "30", "properties": {"amount": 418.8, "latitude": 18.182931, "longitude": 120.534394, "name": "LAOAG CITY, ILOCOS NORTE"}, "type": "Feature"}, {"bbox": [123.728406, 13.150792, 123.728406, 13.150792], "geometry": {"coordinates": [123.728406, 13.150792], "type": "Point"}, "id": "31", "properties": {"amount": 243.29999999999998, "latitude": 13.150792, "longitude": 123.728406, "name": "LEGASPI CITY, ALBAY"}, "type": "Feature"}, {"bbox": [124.612103, 8.409083, 124.612103, 8.409083], "geometry": {"coordinates": [124.612103, 8.409083], "type": "Point"}, "id": "32", "properties": {"amount": 52.800000000000004, "latitude": 8.409083, "longitude": 124.612103, "name": "LUMBIA AIRPORT, MISAMIS ORIENTAL"}, "type": "Feature"}, {"bbox": [124.8604, 10.139008, 124.8604, 10.139008], "geometry": {"coordinates": [124.8604, 10.139008], "type": "Point"}, "id": "33", "properties": {"amount": 211.6, "latitude": 10.139008, "longitude": 124.8604, "name": "MAASIN, SOUTHERN LEYTE"}, "type": "Feature"}, {"bbox": [123.980131, 10.322444, 123.980131, 10.322444], "geometry": {"coordinates": [123.980131, 10.322444], "type": "Point"}, "id": "34", "properties": {"amount": 132.8, "latitude": 10.322444, "longitude": 123.980131, "name": "MACTAN INTERNATIONAL AIRPORT, CEBU"}, "type": "Feature"}, {"bbox": [125.1339, 8.151333, 125.1339, 8.151333], "geometry": {"coordinates": [125.1339, 8.151333], "type": "Point"}, "id": "35", "properties": {"amount": 118.10000000000001, "latitude": 8.151333, "longitude": 125.1339, "name": "MALAYBALAY, BUKIDNON"}, "type": "Feature"}, {"bbox": [123.629433, 12.366183, 123.629433, 12.366183], "geometry": {"coordinates": [123.629433, 12.366183], "type": "Point"}, "id": "36", "properties": {"amount": 110.8, "latitude": 12.366183, "longitude": 123.629433, "name": "MASBATE, MASBATE"}, "type": "Feature"}, {"bbox": [121.0162974, 14.51271831, 121.0162974, 14.51271831], "geometry": {"coordinates": [121.0162974, 14.51271831], "type": "Point"}, "id": "37", "properties": {"amount": 392.3, "latitude": 14.51271831, "longitude": 121.0162974, "name": "NAIA"}, "type": "Feature"}, {"bbox": [120.978733, 14.586972, 120.978733, 14.586972], "geometry": {"coordinates": [120.978733, 14.586972], "type": "Point"}, "id": "38", "properties": {"amount": 529.6999999999999, "latitude": 14.586972, "longitude": 120.978733, "name": "PORT AREA (MCO), MANILA"}, "type": "Feature"}, {"bbox": [118.758778, 9.740339, 118.758778, 9.740339], "geometry": {"coordinates": [118.758778, 9.740339], "type": "Point"}, "id": "39", "properties": {"amount": 61.699999999999996, "latitude": 9.740339, "longitude": 118.758778, "name": "PUERTO PRINCESA CITY, PALAWAN"}, "type": "Feature"}, {"bbox": [122.275358, 12.590664, 122.275358, 12.590664], "geometry": {"coordinates": [122.275358, 12.590664], "type": "Point"}, "id": "40", "properties": {"amount": 228.8, "latitude": 12.590664, "longitude": 122.275358, "name": "ROMBLON, ROMBLON"}, "type": "Feature"}, {"bbox": [122.74965, 11.6002, 122.74965, 11.6002], "geometry": {"coordinates": [122.74965, 11.6002], "type": "Point"}, "id": "41", "properties": {"amount": 368.0, "latitude": 11.6002, "longitude": 122.74965, "name": "ROXAS CITY, CAPIZ"}, "type": "Feature"}, {"bbox": [121.047689, 12.360853, 121.047689, 12.360853], "geometry": {"coordinates": [121.047689, 12.360853], "type": "Point"}, "id": "42", "properties": {"amount": 740.8, "latitude": 12.360853, "longitude": 121.047689, "name": "SAN JOSE, OCCIDENTAL MINDORO"}, "type": "Feature"}, {"bbox": [120.898583, 14.491647, 120.898583, 14.491647], "geometry": {"coordinates": [120.898583, 14.491647], "type": "Point"}, "id": "43", "properties": {"amount": 553.5, "latitude": 14.491647, "longitude": 120.898583, "name": "SANGLEY POINT, CAVITE"}, "type": "Feature"}, {"bbox": [121.044569, 14.644819, 121.044569, 14.644819], "geometry": {"coordinates": [121.044569, 14.644819], "type": "Point"}, "id": "44", "properties": {"amount": 535.9, "latitude": 14.644819, "longitude": 121.044569, "name": "SCIENCE GARDEN, QUEZON CITY"}, "type": "Feature"}, {"bbox": [120.459769, 17.889792, 120.459769, 17.889792], "geometry": {"coordinates": [120.459769, 17.889792], "type": "Point"}, "id": "45", "properties": {"amount": 533.1, "latitude": 17.889792, "longitude": 120.459769, "name": "SINAIT, ILOCOS SUR (former Vigan Station)"}, "type": "Feature"}, {"bbox": [125.489417, 9.782717, 125.489417, 9.782717], "geometry": {"coordinates": [125.489417, 9.782717], "type": "Point"}, "id": "46", "properties": {"amount": 134.0, "latitude": 9.782717, "longitude": 125.489417, "name": "SURIGAO, SURIGAO DEL NORTE"}, "type": "Feature"}, {"bbox": [125.024978, 11.225614, 125.024978, 11.225614], "geometry": {"coordinates": [125.024978, 11.225614], "type": "Point"}, "id": "47", "properties": {"amount": 67.10000000000001, "latitude": 11.225614, "longitude": 125.024978, "name": "TACLOBAN CITY, LEYTE"}, "type": "Feature"}, {"bbox": [123.856097, 9.667172, 123.856097, 9.667172], "geometry": {"coordinates": [123.856097, 9.667172], "type": "Point"}, "id": "48", "properties": {"amount": 100.7, "latitude": 9.667172, "longitude": 123.856097, "name": "TAGBILARAN, BOHOL"}, "type": "Feature"}, {"bbox": [121.36925, 14.58145, 121.36925, 14.58145], "geometry": {"coordinates": [121.36925, 14.58145], "type": "Point"}, "id": "49", "properties": {"amount": 508.0, "latitude": 14.58145, "longitude": 121.36925, "name": "TANAY, RIZAL"}, "type": "Feature"}, {"bbox": [121.602108, 14.014753, 121.602108, 14.014753], "geometry": {"coordinates": [121.602108, 14.014753], "type": "Point"}, "id": "50", "properties": {"amount": 234.4, "latitude": 14.014753, "longitude": 121.602108, "name": "TAYABAS, QUEZON"}, "type": "Feature"}, {"bbox": [121.752503, 17.637622, 121.752503, 17.637622], "geometry": {"coordinates": [121.752503, 17.637622], "type": "Point"}, "id": "51", "properties": {"amount": 214.6, "latitude": 17.637622, "longitude": 121.752503, "name": "TUGUEGARAO, CAGAYAN"}, "type": "Feature"}, {"bbox": [124.212125, 13.579144, 124.212125, 13.579144], "geometry": {"coordinates": [124.212125, 13.579144], "type": "Point"}, "id": "52", "properties": {"amount": 200.60000000000002, "latitude": 13.579144, "longitude": 124.212125, "name": "VIRAC, CATANDUANES (SYNOP)"}, "type": "Feature"}, {"bbox": [122.063272, 6.919661, 122.063272, 6.919661], "geometry": {"coordinates": [122.063272, 6.919661], "type": "Point"}, "id": "53", "properties": {"amount": 38.4, "latitude": 6.919661, "longitude": 122.063272, "name": "ZAMBOANGA, ZAMBOANGA DEL SUR"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_71e870ab8e5ddad4cfee324e77002638.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["name", "amount"];
+    let aliases = ["Station Name", "Rain Amount (mm)"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumpopup"});
+                     
+    
+            geo_json_71e870ab8e5ddad4cfee324e77002638.addTo(map_f875b82da268129a7e3911c53c7eebf9);
+        
+    
+            tile_layer_c1a0bd23b89a8e629dfd394c2d7a4690.addTo(map_f875b82da268129a7e3911c53c7eebf9);
+        
+    
+            geo_json_71e870ab8e5ddad4cfee324e77002638.addTo(map_f875b82da268129a7e3911c53c7eebf9);
+        
+</script>
+</html>

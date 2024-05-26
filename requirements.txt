@@ -12,7 +12,9 @@ pytesseract
 pdf2image
 
 geopandas
+geoalchemy2 
 shapely
 folium
 matplotlib
 scikit-learn
+mapclassify
